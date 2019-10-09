@@ -50,13 +50,14 @@
   var myGamePiece;
   var game_total = 0;
 
-  // Functions to create buttons and <p> tags
+  // Function to create <p> tags
   function create_p(text){
     var p = document.createElement("p");
     var node = document.createTextNode(text);
     p.appendChild(node);
     document.body.appendChild(p);
   }
+  // Function to create buttons
   function create_b(name,onclickf){
     var b = document.createElement("INPUT");
     b.setAttribute("type","button");
@@ -65,7 +66,7 @@
     document.body.appendChild(b);
   }
 
-  // Display and parse input data to upload to game
+  // Display confirmation of input data to upload to game
   function displayInput(){
     var file = document.getElementById("fileInput").files[0];
     if (file) {
@@ -80,6 +81,7 @@
         }
     }
   }
+  // Parse input data that was uploaded
   function parseInput(contents){
     token = []
     tokens = []
@@ -109,6 +111,7 @@
     var sizex = 50;
     var sizey = 50;
     var skip = 0;
+    // Generates dirt plots, but check for single axis, if plots are on the same axis, they are merged
     for (i = 0; i < dirt_patches.length; i++){
       if (i > 0 && dirt_patches[i-1][0] == dirt_patches[i][0] || dirt_patches[i+1] && dirt_patches[i][0] == dirt_patches[i+1][0]){
         if (skip){
@@ -134,6 +137,7 @@
       }
     }
   }
+  // Starts the game, initial uploaded instructions are passed as args
   function startGame(room_dimensions, hoover_position, dirt_patches, driving_instructions) {
       unhide("d-pad");
       unhide("upload_button");
@@ -145,7 +149,8 @@
       position[1] = hoover_position[1]*100;
       myGamePiece = new component(50, 50, "red", position[0], position[1]);
       create_patches(dirt_patches);
-    }
+  }
+  // Geneartes a game board object 'canvas' with dimensions, etc
   var myGameArea = {
       canvas : document.createElement("canvas"),
       start : function() {
@@ -172,6 +177,7 @@
         clearInterval(this.interval);
     }
   }
+  // Creates a component object with properties for define Filth or dirt plots
   function component(width, height, color, x, y) {
     this.width = width;
     this.height = height;
@@ -188,6 +194,7 @@
       this.x += this.speedX;
       this.y += this.speedY;
     }
+    // Logic to detect if filth crashes with dirt plots, so that they can be removed if he does and added to his score
     this.crashWith = function(otherobj) {
       var myleft = this.x;
       var myright = this.x + (this.width);
@@ -207,6 +214,7 @@
       return crash;
     }
   }
+  // Function that contantly updates the frames of the game for moves, etc
   function updateGameArea(num_pathes){
     myGameArea.clear();
     myGamePiece.newPos();
@@ -220,12 +228,14 @@
         stopMove();
       }
     }
+    // Logic to control if the game is over or now
     if (game_total == directions[0].length){
       console.log(position[0]/100+" "+position[1]/100+"\n"+plots_cleaned);
-      alert("Game over! No more moves left. Score below.\n\nRefresh page when done to restart/upload a new input file.\n\nHover: "+position[0]/100+", "+position[1]/100+"\nDirt plots cleared: "+plots_cleaned);
+      alert("Game over! No more moves left. Score below.\n\nRefresh page when done to restart/upload a new input file.\n\nLast hoover position: "+position[0]/100+", "+position[1]/100+"\nDirt plots cleared: "+plots_cleaned);
     }
     displyNav();
   }
+  // Lines 238 - 273 define the directional pad movements and update the hoover position
   function moveup() {
     myGamePiece.y += incrementor;
     position[1] += incrementor*2;
@@ -260,6 +270,7 @@
       }
     }
   }
+  // Creates the helpful navigational text, the cardinal direction output and the hoover position
   function displyNav(){
     document.getElementById("hoover_pos").innerHTML = "Current hoover position: "+position[0]/100+", "+position[1]/100;
     document.getElementById("all_moves").innerHTML = "Driving instructions: "+directions[0];
@@ -270,6 +281,7 @@
     }
 
   }
+  // Help alert dialogue 
   function displayHelp(){
     alert("Mr. Filtch 2000! Your handy dirt cleaning roombot -- the best there is.\n\nTo get started, confirm your uploaded 'input.txt' details...\n\nRoom dimensions: "+tokens[0]+"\nInitial hoover position: "+tokens[1]+"\nPatches of dirt coordinates: "+tokens[3]+"\nDriving instructions: "+tokens[2]+"\n\nTo navigate Mr. Filtch 2000, use the directional pad below the room map. Then follow the directions given in the 'input.txt' file.\n\nOh! Almost forgot, when the game is complete, an alert will pop up. After you've reviewed Mr. Filch's score, refresh your web browser. If you need to view this alert again, just click the 'Instructions' button.");
   }
