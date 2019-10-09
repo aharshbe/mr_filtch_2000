@@ -6,7 +6,7 @@
 ### Usage:
 * Clone repo: `git@github.com:aharshbe/mr_filtch_2000.git`
 * Type: `cd mr_filtch_2000`
-* Type: `open filtch2000.html`
+* Type: `open index.html`
 
 ### Requirements:
 * A modern web browser, e.g., Chrome, Safari, Internet Explorer, etc
