@@ -1,5 +1,5 @@
 # Mr. Filtch 2000
-***
+
 ### Description:
   Similar to Roomba, Mr. Filtch 2000 cleans dirt as it shows up in an imaginary room.
 
