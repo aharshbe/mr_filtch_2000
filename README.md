@@ -48,7 +48,7 @@ NNESEESWNWW
 * The logic that makes dirt plots on single axis (x or y) as 1 plot is wonky at best and needs improvement, but it works for the base case provided above
 * General UI/UX improvements would be nice to have
 * A better initial starting screen with instructions on how to upload a file, etc
-* More verbose comments on code structure and my though process
+* More verbose comments on code structure and my thought process
 
 ***
 
