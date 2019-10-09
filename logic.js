@@ -238,7 +238,7 @@ function displyNav(){
   document.getElementById("hoover_pos").innerHTML = "Current hoover position: "+position[0]/100+", "+position[1]/100;
   document.getElementById("all_moves").innerHTML = "Driving instructions: "+directions[0];
   if (directions[0][game_total]){
-    document.getElementById("FileContents").innerHTML = "Next move Roomba: "+directions[0][game_total];
+    document.getElementById("FileContents").innerHTML = "Next move Mr. Filtch: "+directions[0][game_total];
   } else {
     document.getElementById("FileContents").innerHTML = "No more moves left! Refresh page to restart.";
   }
