@@ -23,7 +23,7 @@
 NNESEESWNWW
 ```
 
-* Line 1 should contain the size of the imaginary room, in this case 5 5 is a room of size 5 x 5 or 25 plots of space **Important: please don't make a room larger than 9 x 9** double digit numbers mess up the game logic
+* Line 1 should contain the size of the imaginary room, in this case 5 5 is a room of size 5 x 5 or 25 plots of space. **Important: please don't make a room larger than 9 x 9** double digit numbers mess up the game logic
 * Line 2 should contain the initial hoover position for Mr. Filtch (where he'll start his cleaning from)
 * Any proceeding lines up until `n - 1` should contain plots in the room where dirt/mess should be placed for Mr. Filtch to clean -- add as many as you like
 * The last line should contain instructions for Mr. Filtch to clean the dirt plots you placed. **Important, these instructions should be in the form of cardinal directions, e.g., N, S, E, W**, you can add as many instructions as you want
