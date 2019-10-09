@@ -1,6 +1,6 @@
 /*
   JavaScript file for Mr. Filtch 2000 logic
-  Added in seperate file because it's cleaner ...
+  Added in separate file because it's cleaner ...
 */
 
 //Globals
@@ -74,7 +74,7 @@ function create_patches(dirt_patches){
   var sizex = 50;
   var sizey = 50;
   var skip = 0;
-  // Generates dirt plots, but check for single axis, if plots are on the same axis, they are merged
+  // Generates dirt plots, but check for single axis: If dirt plots are on the same axis, they are merged
   for (i = 0; i < dirt_patches.length; i++){
     if (i > 0 && dirt_patches[i-1][0] == dirt_patches[i][0] || dirt_patches[i+1] && dirt_patches[i][0] == dirt_patches[i+1][0]){
       if (skip){
@@ -100,7 +100,7 @@ function create_patches(dirt_patches){
     }
   }
 }
-// Starts the game, initial uploaded instructions are passed as args
+// Starts the game: Initial uploaded instructions are passed as args
 function startGame(room_dimensions, hoover_position, dirt_patches, driving_instructions) {
     unhide("d-pad");
     unhide("upload_button");
@@ -113,7 +113,7 @@ function startGame(room_dimensions, hoover_position, dirt_patches, driving_instr
     myGamePiece = new component(50, 50, "red", position[0], position[1]);
     create_patches(dirt_patches);
 }
-// Geneartes a game board object 'canvas' with dimensions, etc
+// Generates a game board object 'canvas' with dimensions, etc
 var myGameArea = {
     canvas : document.createElement("canvas"),
     start : function() {
@@ -140,7 +140,7 @@ var myGameArea = {
       clearInterval(this.interval);
   }
 }
-// Creates a component object with properties for define Filth or dirt plots
+// Creates a component object with properties to define Mr. Filtch or dirt plots
 function component(width, height, color, x, y) {
   this.width = width;
   this.height = height;
@@ -157,7 +157,7 @@ function component(width, height, color, x, y) {
     this.x += this.speedX;
     this.y += this.speedY;
   }
-  // Logic to detect if filth crashes with dirt plots, so that they can be removed if he does and added to his score
+  // Logic to detect if Mr. Filtch crashes with dirt plots, so that they can be removed if he does and added to his score
   this.crashWith = function(otherobj) {
     var myleft = this.x;
     var myright = this.x + (this.width);
@@ -177,7 +177,7 @@ function component(width, height, color, x, y) {
     return crash;
   }
 }
-// Function that contantly updates the frames of the game for moves, etc
+// Function that constantly updates the frames of the game for moves, etc
 function updateGameArea(num_pathes){
   myGameArea.clear();
   myGamePiece.newPos();
@@ -191,7 +191,7 @@ function updateGameArea(num_pathes){
       stopMove();
     }
   }
-  // Logic to control if the game is over or now
+  // Logic to control if the game is over or not
   if (game_total == directions[0].length){
     console.log(position[0]/100+" "+position[1]/100+"\n"+plots_cleaned);
     alert("Game over! No more moves left. Score below.\n\nRefresh page when done to restart/upload a new input file.\n\nLast hoover position: "+position[0]/100+", "+position[1]/100+"\nDirt plots cleared: "+plots_cleaned);
