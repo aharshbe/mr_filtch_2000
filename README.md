@@ -1,5 +1,5 @@
 # Mr. Filtch 2000
-
+***
 ### Description:
   Similar to Roomba, Mr. Filtch 2000 cleans dirt as it shows up in an imaginary room.
 
@@ -8,7 +8,7 @@
 * Type: `cd mr_filtch_2000`
 * Type: `open index.html` or go to the GitHub page online [here](https://aharshbe.github.io/mr_filtch_2000/).
 * Once you have the .html file open, click the `Choose File` button. Then, select a local file with instructions for Mr. Filtch 2000. Below is an example -- there is also an example in the [project repo](https://github.com/aharshbe/mr_filtch_2000):
-
+***
 ### The `input.txt` file:
 
 * The `input.txt` file is the file uploaded when you first open Mr. Filtch 2000's place on the internet ([link](https://aharshbe.github.io/mr_filtch_2000/))
@@ -29,10 +29,14 @@ NNESEESWNWW
 * The last line should contain instructions for Mr. Filtch to clean the dirt plots you placed. **Important, these instructions should be in the form of cardinal directions, e.g., N, S, E, W**, you can add as many instructions as you want
 * Please note: You can only make as many moves as instructions are passed on the last line of the `input.txt` file or the game is over and you'll need to restart
 * Use the directional pad that appears when the map appears to move. To make it easier to follow the instructions you placed in the `input.txt` file, there's a guide above the directional pad
+* If at any point you run in to trouble, there is an `Instructions` button available under the directional pad, you can also check back here for reference
+***
 
 ### Requirements:
 * A modern web browser, e.g., Chrome, Safari, Internet Explorer, etc
 * **You must upload a `input.txt` file that follows the proper format in the exmaple above in order for the program to work**
+
+***
 
 #### Contact:
 * Email `aharshbe@live.com` if you have any questions!
@@ -40,4 +44,5 @@ NNESEESWNWW
 #### Author:
 * Austin Harshberger
 
+***
 *P.S. This is based on an interview challenge, details outlined [here](https://gist.github.com/alirussell/2d200d21f117f8d570667daa7acdbae5#https://gist.github.com/alirussell/2d200d21f117f8d570667daa7acdbae5).*
