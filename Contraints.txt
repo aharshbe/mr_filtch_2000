@@ -1,0 +1,9 @@
+To-do:
+- Hitting walls doesn't matter
+- Fix the single line x and y axis when the coordinates are not even or too far apart in the array
+- Fix current hoover position output
+- Improve design/graphics
+- Largest game board size allowed is 9x9
+- You need at least 1 driving instruction
+- Add tests
+- Deploy behind GitHub pages
