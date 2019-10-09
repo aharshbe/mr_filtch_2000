@@ -29,8 +29,12 @@ NNESEESWNWW
 * The last line should contain instructions for Mr. Filtch to clean the dirt plots you placed. **Important, these instructions should be in the form of cardinal directions, e.g., N, S, E, W**, you can add as many instructions as you want
 * Please note: You can only make as many moves as instructions are passed on the last line of the `input.txt` file or the game is over and you'll need to restart
 * Use the directional pad that appears when the map appears to move. To make it easier to follow the instructions you placed in the `input.txt` file, there's a guide above the directional pad which cycles through the instructions on the last line of the `input.txt` file
-* If at any point you run in to trouble, there is an `Instructions` button available under the directional pad, you can also check back here for reference
+* If at any point you run into trouble, there is an `Instructions` button available under the directional pad, you can also check back here for reference
 ***
+
+
+### Completing the game:
+* Once Mr. Filtch 2000 is done, e.g., all your directions have completed, or you've ignored them but moved as many times as directions you placed, the final hoover position as well as the number of dirt plots cleared will be displayed, to restart the game, refresh your browser page and choose another `input.txt` or the same if you want to try again
 
 ### Requirements:
 * A modern web browser, e.g., Chrome, Safari, Internet Explorer, etc
