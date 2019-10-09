@@ -6,7 +6,7 @@
 ### Usage:
 * Clone repo: `git@github.com:aharshbe/mr_filtch_2000.git`
 * Type: `cd mr_filtch_2000`
-* Type: `open index.html` or go to the GitHub page online [here](https://aharshbe.github.io/mr_filtch_2000/).
+* Type: `open index.html` or go to the GitHub page online [here](https://aharshbe.github.io/mr_filtch_2000/)
 * Once you have the .html file open, click the `Choose File` button. Then, select a local file with instructions for Mr. Filtch 2000. Below is an example -- there is also an example in the project repo [here](https://github.com/aharshbe/mr_filtch_2000/blob/master/input_example.txt) and a more complicated example [here](https://github.com/aharshbe/mr_filtch_2000/blob/master/input_example_2.txt)
 ***
 ### The `input.txt` file:
