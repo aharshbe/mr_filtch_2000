@@ -36,6 +36,15 @@ NNESEESWNWW
 * A modern web browser, e.g., Chrome, Safari, Internet Explorer, etc
 * **You must upload a `input.txt` file that follows the proper format in the exmaple above in order for the program to work**
 
+
+### Bugs/To be fixed:
+* Filtch currently goes past the walls of the room, oops
+* Current hoover position output is not 100% accurate, need to fix the math
+* The logic that makes dirt plots on single axis (x or y) as 1 plot is wonky at best and needs improvement, but it works for the base case provided above
+* General UI/UX improvements would be nice to have
+* A better initial starting screen with instructions on how to upload a file, etc
+* More verbose comments on code structure and my though process
+
 ***
 
 #### Contact:
